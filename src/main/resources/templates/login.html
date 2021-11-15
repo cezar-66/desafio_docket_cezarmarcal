@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Docket Backend Java</title>
+    <link rel="stylesheet" href="css/bootstrap_login.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <div class="container">
+            <div class="col-md-12">
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">Usuário e/ou inválidos!</div>
+                </div>
+
+                <div th:if="${param.logout}">
+                    <div class="alert alert-info">Até logo!</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-comece-agora">
+            <div class="steps exibe" id="step1">
+                <div class="container step-frontpage">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="box-infos-plataforma mb-4">
+                                <p class="text-purple text-primary--body infos-text">
+                                    Docket Backend Java Cezar Marçal<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="box-plataforma">
+                                <h2 class="text-primary--subtitle-bold text-uppercase text-purple mb-3">Entrar</h2>
+                                <p class="text-purple text-primary--medium mb-3">Informe seus dados para continuar..</p>
+                                <hr class="mb-4">
+
+                                <form action="/authenticate" method="post">
+                                    <div class="form-group mb-3">
+                                        <label class="text-purple text-primary--body" for="email">Login <span class="text-red">*</span></label>
+                                        <input name="username" autocomplete="off" type="text" class="form-input-text mt-2" placeholder="Digite seu e-mail" id="email">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label class="text-purple text-primary--body" for="email">Senha <span class="text-red">*</span></label>
+                                        <input name="password" autocomplete="off" type="password" class="form-input-text mt-2" placeholder="Digite seu senha" id="password">
+                                    </div>
+
+                                    <button type="submit" class="btn_raised js-avancar" data-step-atual="1">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

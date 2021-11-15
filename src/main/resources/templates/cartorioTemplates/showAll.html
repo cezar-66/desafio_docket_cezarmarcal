@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:max-width="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Cartorio</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+    <div class="header">
+        <h3 class="title">Cartórios</h3>
+    </div>
+
+    <div class="content table-responsive table-full-width">
+        <table class="table">
+            <thead>
+            <th>ID</th>
+            <th>Nome do Cartório</th>
+            <th>Endereço</th>
+            <th>Certidões</th>
+            <th>Ações</th>
+            <th></th>
+            <th></th>
+            </thead>
+            <tbody>
+            <tr th:each="cartorio : ${cartorios}">
+                <td th:text="${cartorio.id}"></td>
+                <td th:text="${cartorio.nome}"></td>
+                <td th:text="${cartorio.endereco}"></td>
+                <td>
+                    <th:block th:each="certidao : ${cartorio.certidoes}">
+                        <span th:text="${certidao.nome} + ' '">Nome da certidão aqui...</span>
+                    </th:block>
+                </td>
+                <td><a th:href="@{'/cartorio/show/' + ${cartorio.id}}" class="btn btn-primary">Visualizar</a></td>
+                <td><a th:href="@{'/cartorio/' + ${cartorio.id}}" class="btn btn-default">Editar</a></td>
+                <td><a th:href="@{'/cartorio/delete/' + ${cartorio.id}}" class="btn btn-danger">Deletar</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>

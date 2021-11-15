@@ -1,0 +1,43 @@
+<div class="sidebar" data-background-color="black" data-active-color="danger" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a th:href="@{/cartorios}" class="simple-text" style="color: white">
+                <img src="https://docket.com.br/img/docket-brasil.svg" style="width: 90px"/>
+                <b>Sistema de cartórios Docket Cezar Marçal</b>
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li>
+                <a th:href="@{/}">
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/cartorios}">
+                    <p>Cartórios</p>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/cartorio/create}">
+                    <p>Adicionar Cartório</p>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/certidoes}">
+                    <p>Certidões</p>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/certidao/create}">
+                    <p>Adicionar Certidão</p>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/logout}">
+                    <p>Sair</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
