@@ -1,6 +1,4 @@
 # desafio_docket_cezarmarcal
-gerenciamento de cartorios
-
 
 <h3>Bem vindo ao sistema de Gerenciamentos de cartórios</h3>
 <p>O projeto visa atender as necessidades básicas de um cartório como:</p>
@@ -23,15 +21,15 @@ gerenciamento de cartorios
 <h3>Arquitetura</h3>
 MVC (Model, View, Controller)
 
-<h3>Importante</h3>
-<p>Ao rodar a aplicação pela primeira vez serão executados dois scripts de migração, sendo eles:
+<h3>Importante*</h3>
+<b>Ao rodar a aplicação pela primeira vez serão executados dois scripts de migração, sendo eles:</b>
 
-V001__Cria_tabela_operador_e_permissoes_de_acesso.sql
-V002__Cria_tabela_cartorios_e_ certidoes.sql.
+V001__Cria_tabela_operador_e_permissoes_de_acesso.sql</br>
+V002__Cria_tabela_cartorios_e_ certidoes.sql
 
-Ao criar o scprit 001 será gerado dois usuários de acesso ao sistema 
-usuario root: user: root, password:123
-usuario user: user: root, password:123</p>
+<h3>Ao criar o scprit 001 será gerado dois usuários de acesso ao sistema</h3> 
+<p>usuario: root password:123</p>
+<p>usuario: user password:123</p>
 
 
 
